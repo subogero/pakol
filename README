@@ -1,0 +1,19 @@
+pakol - pack a git repo into a self extracting shell script
+===========================================================
+
+Call pakol in the root directory of a git project.
+It will create a shell script called <projectname>.pakk.
+
+After copying the shell script somewhere else and calling it,
+it will create the <projectname> directory and create the project files in it.
+
+Hint: Add a pakk file to your project. It can be viewed and copy-pasted from
+a hosting site, thus downloading the project without downloading the project.
+
+Caveat Programmor
+-----------------
+
+There should be a trailing newline in the last line of each file.
+Use a decent editor, like vi, vi or vi, or if there is no other way, vi.
+
+May or may not work with binary files. Most probably not.
