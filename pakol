@@ -8,9 +8,9 @@ git ls-tree -r HEAD \
 | while read mode file; do
 	dir=`dirname $file`
 	[ "$dir" != '.' ] && echo "[ ! -d \"$dir\" ] && mkdir -p \"$dir\"" >>$pj.pakk
-	echo "cat <<\"PACK\" >>$file" >>$pj.pakk
+	echo "cat <<\"PAKK\" >>$file" >>$pj.pakk
 	cat $file >>$pj.pakk
-	echo PACK >>$pj.pakk
+	echo PAKK >>$pj.pakk
 	echo "chmod $mode $file" >>$pj.pakk
 done;
 chmod +x $pj.pakk
