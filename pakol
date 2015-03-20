@@ -1,6 +1,6 @@
 #!/bin/sh
 pj=$(basename $(pwd))
-echo '#!/bin/sh' >>$pj.pakk
+echo '#!/bin/sh' >$pj.pakk
 echo mkdir "$pj" >>$pj.pakk
 echo cd "$pj" >>$pj.pakk
 git ls-tree -r HEAD \
