@@ -8,6 +8,7 @@ git ls-tree -r HEAD \
 | while read mode file; do
 	dir=`dirname $file`
 	[ "$dir" != '.' ] && echo "[ ! -d \"$dir\" ] && mkdir -p \"$dir\"" >>$pj.pakk
+	[ $file = $pj.pakk ] && continue
 	echo "cat <<\"PAKK\" >>$file" >>$pj.pakk
 	cat $file >>$pj.pakk
 	echo PAKK >>$pj.pakk
